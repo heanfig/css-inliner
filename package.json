@@ -11,7 +11,8 @@
     "dev": "rollup -c -w",
     "server": "node server.js",
     "start": "npm run build & npm run server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "rollup -c"
   },
   "keywords": [
     "svelte",
