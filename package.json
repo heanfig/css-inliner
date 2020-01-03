@@ -1,10 +1,14 @@
 {
-  "name": "svelte-quotes",
+  "name": "ns-email_inliner",
   "version": "1.0.0",
-  "description": "A demo app of Svelte that displays quotes",
-  "main": "src/index.js",
+  "description": "Css inliner for emails",
+  "main": "server.js",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
-    "build": "webpack",
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
     "server": "node server.js",
     "start": "npm run build & npm run server",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,20 +18,22 @@
     "sveltejs",
     "javascript"
   ],
-  "author": "John Hannah",
+  "author": "heanfig",
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.3",
-    "svelte": "^1.59.0"
+    "lodash": "^4.17.15",
+    "lodash.flow": "^3.5.0",
+    "lodash.template": "^4.5.0",
+    "styliner": "^1.0.4"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "html-webpack-plugin": "^3.1.0",
-    "svelte-loader": "^2.5.1",
-    "webpack": "^4.4.1",
-    "webpack-cli": "^2.0.13"
+    "@rollup/plugin-commonjs": "^11.0.0",
+    "@rollup/plugin-node-resolve": "^6.0.0",
+    "rollup": "^1.20.0",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^5.1.2",
+    "svelte": "^3.0.0"
   }
 }
