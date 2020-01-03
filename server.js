@@ -3,6 +3,8 @@ const path = require('path');
 var Styliner = require('styliner');
 var styliner = new Styliner();
 
+const PORT = process.env.PORT || 5000;
+
 const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded());
@@ -15,6 +17,6 @@ app.post('/generate', function(req, res) {
   });
 });
 
-app.listen(8080, () => {
+app.listen(PORT, () => {
   console.log('App started and available at http://localhost:8080');
 });
