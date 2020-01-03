@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "builds": [
+        { "src": "server.js", "use": "@now/node-server" },
+        { "src": "package.json", "use": "@now/static-build" }
+    ],
+    "routes": [
+      {
+        "src": "/generate",
+        "dest": "/server.js",
+        "methods": ["POST"]
+      }
+    ]
+  }
